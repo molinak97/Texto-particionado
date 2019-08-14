@@ -1,6 +1,6 @@
 ﻿namespace LimitadorTexto
 {
-    partial class Form1
+    partial class Visual
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -31,6 +31,9 @@
             this.TextoOrigen = new System.Windows.Forms.TextBox();
             this.TextoCopia = new System.Windows.Forms.TextBox();
             this.ButtonSeparar = new System.Windows.Forms.Button();
+            this.DetalladoGrid = new System.Windows.Forms.DataGridView();
+            this.Detallado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalladoGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // TextoOrigen
@@ -60,16 +63,33 @@
             this.ButtonSeparar.UseVisualStyleBackColor = true;
             this.ButtonSeparar.Click += new System.EventHandler(this.ButtonSeparar_Click);
             // 
-            // Form1
+            // DetalladoGrid
+            // 
+            this.DetalladoGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DetalladoGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Detallado});
+            this.DetalladoGrid.Location = new System.Drawing.Point(43, 271);
+            this.DetalladoGrid.Name = "DetalladoGrid";
+            this.DetalladoGrid.Size = new System.Drawing.Size(708, 167);
+            this.DetalladoGrid.TabIndex = 3;
+            // 
+            // Detallado
+            // 
+            this.Detallado.HeaderText = "Detallado";
+            this.Detallado.Name = "Detallado";
+            // 
+            // Visual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DetalladoGrid);
             this.Controls.Add(this.ButtonSeparar);
             this.Controls.Add(this.TextoCopia);
             this.Controls.Add(this.TextoOrigen);
-            this.Name = "Form1";
+            this.Name = "Visual";
             this.Text = "Separador de Texto";
+            ((System.ComponentModel.ISupportInitialize)(this.DetalladoGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,6 +100,8 @@
         private System.Windows.Forms.TextBox TextoOrigen;
         private System.Windows.Forms.TextBox TextoCopia;
         private System.Windows.Forms.Button ButtonSeparar;
+        private System.Windows.Forms.DataGridView DetalladoGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Detallado;
     }
 }
 

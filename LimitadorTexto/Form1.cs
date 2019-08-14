@@ -10,16 +10,24 @@ using System.Windows.Forms;
 
 namespace LimitadorTexto
 {
-    public partial class Form1 : Form
+    public partial class Visual : Form
     {
-        public Form1()
+        public Visual()
         {
             InitializeComponent();
         }
 
         private void ButtonSeparar_Click(object sender, EventArgs e)
         {
+            DetalladoGrid.Rows.Clear();
             TextoCopia.Text = TextoOrigen.Text;
+            string phrase = TextoOrigen.Text;
+            string[] words = phrase.Split(' ');
+
+            foreach (var word in words)
+            {
+                DetalladoGrid.Rows.Add(word);
+            }
         }
     }
 }
