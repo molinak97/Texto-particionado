@@ -16,5 +16,10 @@ namespace LimitadorTexto
         {
             InitializeComponent();
         }
+
+        private void ButtonSeparar_Click(object sender, EventArgs e)
+        {
+            TextoCopia.Text = TextoOrigen.Text;
+        }
     }
 }

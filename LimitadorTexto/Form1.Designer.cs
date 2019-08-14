@@ -28,13 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.TextoOrigen = new System.Windows.Forms.TextBox();
+            this.TextoCopia = new System.Windows.Forms.TextBox();
+            this.ButtonSeparar = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // TextoOrigen
+            // 
+            this.TextoOrigen.Location = new System.Drawing.Point(43, 57);
+            this.TextoOrigen.Multiline = true;
+            this.TextoOrigen.Name = "TextoOrigen";
+            this.TextoOrigen.Size = new System.Drawing.Size(258, 141);
+            this.TextoOrigen.TabIndex = 0;
+            // 
+            // TextoCopia
+            // 
+            this.TextoCopia.Location = new System.Drawing.Point(493, 57);
+            this.TextoCopia.Multiline = true;
+            this.TextoCopia.Name = "TextoCopia";
+            this.TextoCopia.Size = new System.Drawing.Size(258, 141);
+            this.TextoCopia.TabIndex = 1;
+            // 
+            // ButtonSeparar
+            // 
+            this.ButtonSeparar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonSeparar.Location = new System.Drawing.Point(346, 148);
+            this.ButtonSeparar.Name = "ButtonSeparar";
+            this.ButtonSeparar.Size = new System.Drawing.Size(109, 50);
+            this.ButtonSeparar.TabIndex = 2;
+            this.ButtonSeparar.Text = "Fragmentar";
+            this.ButtonSeparar.UseVisualStyleBackColor = true;
+            this.ButtonSeparar.Click += new System.EventHandler(this.ButtonSeparar_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.ButtonSeparar);
+            this.Controls.Add(this.TextoCopia);
+            this.Controls.Add(this.TextoOrigen);
+            this.Name = "Form1";
+            this.Text = "Separador de Texto";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox TextoOrigen;
+        private System.Windows.Forms.TextBox TextoCopia;
+        private System.Windows.Forms.Button ButtonSeparar;
     }
 }
 
